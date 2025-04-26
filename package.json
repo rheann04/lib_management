@@ -17,6 +17,7 @@
     "nextjs-toploader": "^3.8.16",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.5.2",
     "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {

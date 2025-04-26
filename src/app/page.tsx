@@ -9,7 +9,7 @@ export default function page() {
     <div className="page-body">
       <div className="choice-container">
         <h1>Select User Type</h1>
-        <button className="choice-button" onClick={() => window.location.href = "/student-login"}>
+        <button className="choice-button" onClick={() => window.location.href = "/Student_Login"}>
           Student
         </button>
         <button className="choice-button" onClick={() => window.location.href = "/admin-login"}>
