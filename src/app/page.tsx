@@ -1,12 +1,12 @@
-// app/home/page.tsx
+// app/page.tsx
 "use client";
 
 import React from "react";
-import "./Home.css"; // We'll create a separate CSS file
+import "./page.css"; // We'll create a separate CSS file
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="home-body">
+    <div className="page-body">
       <div className="choice-container">
         <h1>Select User Type</h1>
         <button className="choice-button" onClick={() => window.location.href = "/student-login"}>
