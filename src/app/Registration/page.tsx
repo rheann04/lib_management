@@ -11,7 +11,7 @@ export default function Registration() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState(""); // New state for confirm password
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [gender, setGender] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [birthday, setBirthday] = useState({ day: "", month: "", year: "" });
@@ -35,7 +35,7 @@ export default function Registration() {
       return;
     }
 
-    if (password !== confirmPassword) {  // Check if password and confirm password match
+    if (password !== confirmPassword) {
       setError("Passwords do not match.");
       return;
     }
@@ -56,7 +56,7 @@ export default function Registration() {
     }
 
     setError("");
-    router.push("/welcome");
+    router.push("/welcome"); // <<< Correct placement
   };
 
   return (
@@ -110,7 +110,7 @@ export default function Registration() {
 
         <Input
           type="password"
-          placeholder="Confirm Password" // New field for confirm password
+          placeholder="Confirm Password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           className="registration-input"
@@ -119,25 +119,15 @@ export default function Registration() {
         <div className="registration-row">
           <select
             value={birthday.month}
-            onChange={(e) =>
-              setBirthday({ ...birthday, month: e.target.value })
-            }
+            onChange={(e) => setBirthday({ ...birthday, month: e.target.value })}
             className="registration-select"
           >
             <option value="">Month</option>
-            <option value="Jan">Jan</option>
-            <option value="Feb">Feb</option>
-            <option value="Mar">Mar</option>
-            <option value="Apr">Apr</option>
-            <option value="May">May</option>
-            <option value="Jun">Jun</option>
-            <option value="Jul">Jul</option>
-            <option value="Aug">Aug</option>
-            <option value="Sep">Sep</option>
-            <option value="Oct">Oct</option>
-            <option value="Nov">Nov</option>
-            <option value="Dec">Dec</option>
+            {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month) => (
+              <option key={month} value={month}>{month}</option>
+            ))}
           </select>
+
           <select
             value={birthday.day}
             onChange={(e) => setBirthday({ ...birthday, day: e.target.value })}
@@ -150,11 +140,10 @@ export default function Registration() {
               </option>
             ))}
           </select>
+
           <select
             value={birthday.year}
-            onChange={(e) =>
-              setBirthday({ ...birthday, year: e.target.value })
-            }
+            onChange={(e) => setBirthday({ ...birthday, year: e.target.value })}
             className="registration-select"
           >
             <option value="">Year</option>
@@ -193,6 +182,11 @@ export default function Registration() {
           Sign Up
         </Button>
       </div>
+
+      <div className="allready-have-account">
+      <a href="#"><h5>Already have an account?</h5></a>
+        
+        </div>
     </div>
   );
 }
