@@ -39,8 +39,14 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
+
+.choice-button:hover {
+  background-color: #0d8ae0; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
 .ADMINchoice-button {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -50,9 +56,10 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.choice-button:hover {
-  background-color: #14b5ff;
+.ADMINchoice-button:hover {
+  background-color: #0b4db8; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
 }

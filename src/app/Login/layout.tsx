@@ -19,7 +19,7 @@ export default function LoginLayout({ children }: { children: React.ReactNode })
 
       {/* Footer Section */}
       <footer className="login-footer">
-        <p>&copy; 2025 Your Company</p>
+        <p>&copy; 2025 BSIT 2-4</p>
       </footer>
     </div>
   );

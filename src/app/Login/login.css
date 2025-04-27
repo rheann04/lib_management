@@ -154,7 +154,7 @@
   font-size: 0.9rem;
 }
 
-/* Admin CSS */
+/*--------------------------Admin CSS-------------------------------------------------------------------*/
 .Adminlogin-title {
   margin-bottom: 1rem;
   color: #1462ff;
@@ -173,23 +173,35 @@
   cursor: pointer;
   margin-top: 0.5rem; /* Add spacing above */
 }
-
 .ADMINlogin-forgotPassword a {
   text-decoration: none;
   color: #1462ff;
 }
 
-.ADMINlogin-button,
-.ADMINlogin-loginButton {
-  width: 100%; /* Make buttons take full width */
-  max-width: 140px; /* Set a consistent width for buttons */
+/* ADMIN LOGIN Buttons */
+.ADMINlogin-buttonGroup {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically if needed */
+  width: 100%; /* Ensure the container takes full width */
+  margin: 0 auto; /* Center the container itself */
+}
+
+.ADMINlogin-Button {
+  width: 100%; /* Make the button take full width */
+  max-width: 300px; /* Set a consistent width for the button */
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #14b5ff;
-  color: white;
+  background-color: #1462ff;
+  color: rgb(255, 255, 255); /* Default text color */
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition for color */
+}
+
+.ADMINlogin-Button:hover {
+  background-color: #006aff;
+  color: rgb(0, 0, 0);
 }

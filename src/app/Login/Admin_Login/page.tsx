@@ -71,10 +71,7 @@ export default function Admin_Login() {
       </div>
 
       <div className="login-buttonGroup">
-        <Button variant="outline" className="ADMINlogin-button">
-          Sign Up
-        </Button>
-        <Button className="ADMINlogin-loginButton" onClick={handleLogin}>
+        <Button className="ADMINlogin-Button" onClick={handleLogin}>
           Login
         </Button>
       </div>

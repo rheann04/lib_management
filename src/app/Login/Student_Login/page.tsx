@@ -3,38 +3,43 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useRouter } from 'next/navigation';  // Replace react-router-dom with next/navigation
+import { useRouter } from 'next/navigation';
 import "../../login/login.css";
 
 export default function Student_Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(""); // Define error state
+  const [error, setError] = useState("");
   
-  const router = useRouter(); // Get the router object
+  const router = useRouter();
 
   const validateEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
   const handleLogin = () => {
     // Validate email
     if (!email || !validateEmail(email)) {
-      setError("Please enter a valid email address."); // Update error state
+      setError("Please enter a valid email address.");
       return;
     }
 
     // Validate password
     if (!password) {
-      setError("Please enter your password."); // Update error state
+      setError("Please enter your password.");
       return;
     }
 
     setError(""); // Clear error if inputs are valid
 
     // Redirect to another page after login
-    router.push('/student_dashboard');  // Change to the correct route you want
+    router.push('/student_dashboard');
+  };
+
+  const handleSignUp = () => {
+    // Redirect to the registration page
+    router.push('/Registration'); // Adjusted to match the correct route
   };
 
   return (
@@ -71,7 +76,7 @@ export default function Student_Login() {
       </div>
 
       <div className="login-buttonGroup">
-        <Button variant="outline" className="signup-button">
+        <Button variant="outline" className="signup-button" onClick={handleSignUp}>
           Sign Up
         </Button>
         <Button className="login-Button" onClick={handleLogin}>
