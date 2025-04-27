@@ -8,11 +8,11 @@ const Page = () => {
   const router = useRouter();
 
   const handleStudentClick = () => {
-    router.push('/login/Student_Login'); // Navigate to Student Login page
+    router.push('/Login/Student_Login'); // Navigate to Student Login page
   };
 
   const handleAdminClick = () => {
-    router.push('/login/Admin/Admin_Login'); // Navigate to Admin Login page
+    router.push('/Login/Admin/Admin_Login'); // Navigate to Admin Login page
   };
 
   return (
