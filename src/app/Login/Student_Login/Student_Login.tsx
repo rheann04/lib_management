@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import styles from "./LoginPage.module.css";
+import styles from './Student_Login.module.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Student_Login() {
