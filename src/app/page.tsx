@@ -12,7 +12,7 @@ const Page = () => {
   };
 
   const handleAdminClick = () => {
-    router.push('/Login/Admin/Admin_Login'); // Navigate to Admin Login page
+    router.push('/Login/Admin_Login'); // Navigate to Admin Login page
   };
 
   return (
@@ -20,7 +20,7 @@ const Page = () => {
       <div className="choice-container">
         <h1>Select User Type</h1>
         <button className="choice-button" onClick={handleStudentClick}>Student</button>
-        <button className="choice-button" onClick={handleAdminClick}>Admin</button>
+        <button className="ADMINchoice-button" onClick={handleAdminClick}>Admin</button>
       </div>
     </div>
   );

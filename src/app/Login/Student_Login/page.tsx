@@ -53,7 +53,6 @@ export default function Student_Login() {
             onChange={(e) => setEmail(e.target.value)}
             className="login-input"
           />
-          <span className="login-inputIcon">📧</span>
         </div>
 
         <div className="login-inputWrapper">
@@ -64,19 +63,18 @@ export default function Student_Login() {
             onChange={(e) => setPassword(e.target.value)}
             className="login-input"
           />
-          <span className="login-inputIcon">🔒</span>
         </div>
 
         <div className="login-forgotPassword">
-          <a href="#">Lost password? Click here!</a>
+          <a href="#">Forgot Password? Click Here!</a>
         </div>
       </div>
 
       <div className="login-buttonGroup">
-        <Button variant="outline" className="login-button">
+        <Button variant="outline" className="signup-button">
           Sign Up
         </Button>
-        <Button className="login-loginButton" onClick={handleLogin}>
+        <Button className="login-Button" onClick={handleLogin}>
           Login
         </Button>
       </div>
