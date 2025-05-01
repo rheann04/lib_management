@@ -33,7 +33,7 @@ export default function Student_Login() {
 
     setError(""); // Clear error if inputs are valid
       // Redirect to the registration page
-      router.push('/Dashboard/Admin_dashboard'); // Adjusted to match the correct route
+      router.push('/Dashboard/Student_dashboard'); // Adjusted to match the correct route
   };
 
   const handleSignUp = () => {

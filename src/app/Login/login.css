@@ -6,7 +6,7 @@
   background-image: url('https://farm1.staticflickr.com/130/376152628_249e3630c0_o_d.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,7 +142,7 @@
 }
 
 .login-Button:hover {
-  background-color: #006aff; /* Change background to gray on hover */
+  background-color: #2600ff; /* Change background to gray on hover */
   color: black; /* Change text color to black on hover */
 }
 

@@ -43,8 +43,9 @@
 }
 
 .choice-button:hover {
-  background-color: #0d8ae0; /* Change background color on hover */
+  background-color: #00ff84; /* Change background color on hover */
   transform: scale(1.05); /* Slightly enlarge the button on hover */
+  
 }
 
 .ADMINchoice-button {
@@ -60,6 +61,6 @@
 }
 
 .ADMINchoice-button:hover {
-  background-color: #0b4db8; /* Change background color on hover */
+  background-color: #00ff84; /* Change background color on hover */
   transform: scale(1.05); /* Slightly enlarge the button on hover */
 }

@@ -34,7 +34,7 @@ export default function Admin_Login() {
     setError(""); // Clear error if inputs are valid
 
     // Redirect to another page after login
-    router.push('/student_dashboard');  // Change to the correct route you want
+    router.push('/Dashboard/Admin_dashboard');  // Change to the correct route you want
   };
 
   return (

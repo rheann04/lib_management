@@ -56,7 +56,7 @@ export default function Registration() {
     }
 
     setError("");
-    router.push("/welcome"); // <<< Correct placement
+    router.push("/Login/Student_Login"); // <<< Correct placement
   };
 
   return (
