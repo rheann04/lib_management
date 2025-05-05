@@ -34,7 +34,6 @@ const Dashboard = () => {
       <section className="section">
         <div className="row">
           <div className="col-lg-12">
-
             <div className="card p-4">
               <div className="dashboard-header">
                 <h5 className="card-title">Available Books</h5>
@@ -107,26 +106,26 @@ const AddEmployeeModal = ({ onClose }: { onClose: () => void }) => {
     <div className="modal-overlay">
       <div className="modal-box">
         <div className="modal-header">
-          <h2>Add New Employee</h2>
+          <h2>Add Books</h2>
           <button className="btn-close" onClick={onClose}>×</button>
         </div>
         <div className="modal-body">
           <form>
             <div className="form-group">
-              <label>Name:</label>
+              <label>Title:</label>
               <input type="text" className="form-control" required />
             </div>
             <div className="form-group">
-              <label>Position:</label>
+              <label>Author:</label>
               <input type="text" className="form-control" required />
             </div>
             <div className="form-group">
-              <label>Age:</label>
-              <input type="number" className="form-control" required />
+              <label>Genre:</label>
+              <input type="text" className="form-control" required />
             </div>
             <div className="form-group">
               <label>Address:</label>
-              <textarea className="form-control" rows={3} required />
+              <input type="text" className="form-control" required />
             </div>
             <button type="submit" className="btn btn-primary mt-3">Add Employee</button>
           </form>

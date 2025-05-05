@@ -3,14 +3,16 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useRouter } from 'next/navigation';  // Replace react-router-dom with next/navigation
+import { useRouter } from 'next/navigation'; // Replace react-router-dom with next/navigation
 import "../../login/login.css";
 
 export default function Admin_Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(""); // Define error state
-  
+  const [showModal, setShowModal] = useState(false); // State to control modal visibility
+  const [modalMessage, setModalMessage] = useState(""); // State to control modal message
+
   const router = useRouter(); // Get the router object
 
   const validateEmail = (email: string) => {
@@ -18,24 +20,33 @@ export default function Admin_Login() {
     return emailRegex.test(email);
   };
 
-  const handleLogin = () => {
-    // Validate email
-    if (!email || !validateEmail(email)) {
-      setError("Please enter a valid email address."); // Update error state
-      return;
-    }
+// 1. Login validation and modal trigger
+const handleLogin = () => {
+  if (!email || !validateEmail(email)) {
+    setError("Please enter a valid email address.");
+    setModalMessage("Incorrect email or password.");
+    setShowModal(true);
+    return;
+  }
 
-    // Validate password
-    if (!password) {
-      setError("Please enter your password."); // Update error state
-      return;
-    }
+  if (!password) {
+    setError("Please enter your password.");
+    setModalMessage("Incorrect email or password.");
+    setShowModal(true);
+    return;
+  }
 
-    setError(""); // Clear error if inputs are valid
+  setError("");
+  setModalMessage("You have successfully logged in!");
+  setShowModal(true); // Show modal on success
+};
 
-    // Redirect to another page after login
-    router.push('/Dashboard/Admin_dashboard');  // Change to the correct route you want
-  };
+// 2. Called only when user clicks "Okay, Got it"
+const handleModalConfirm = () => {
+  setShowModal(false);
+  router.push('/Dashboard/Admin_dashboard');
+};
+
 
   return (
     <div className="login-container"> {/* Apply CSS class from login.css */}
@@ -75,6 +86,24 @@ export default function Admin_Login() {
           Login
         </Button>
       </div>
+
+      {showModal && (
+  <div className="loginmodal">
+    <div className="modal-box">
+      <p>{modalMessage}</p>
+      {modalMessage === "You have successfully logged in!" ? (
+        <button className="btn-confirm" onClick={handleModalConfirm}>
+          Okay, Got it
+        </button>
+      ) : (
+        <button className="btn-close" onClick={() => setShowModal(false)}>
+          Close
+        </button>
+      )}
     </div>
+  </div>
+)}
+  
+      </div>
   );
 }
